@@ -44,6 +44,7 @@ class StingerSoftEntitySearchExtension extends Extension {
 		$entityToDocumentMapperDefinition->setArgument('$mapping', $config['types']);
 		
 		$container->getDefinition(DoctrineListener::class)->setArgument('$enableIndexing', $config['enable_indexing']);
+		$container->getDefinition(DoctrineListener::class)->setArgument('$enableAsync', $config['enable_async']);
 		$container->setAlias(SearchService::class, $config['search_service']);
 
 		$facetFormDefinition = $container->getDefinition('stinger_soft.entity_search.forms.query_type');

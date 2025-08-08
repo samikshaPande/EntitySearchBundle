@@ -35,6 +35,7 @@ class Configuration implements ConfigurationInterface {
 		$treeBuilder->getRootNode()->children()
 			->booleanNode('enable_indexing')->defaultFalse()->end()
 			->booleanNode('enable_search')->defaultFalse()->end()
+			->booleanNode('enable_async')->defaultFalse()->end()
 			->scalarNode('search_service')->defaultValue('stinger_soft.entity_search.dummy_search_service')->end()
 			->arrayNode('results')->addDefaultsIfNotSet()
 				->children()
