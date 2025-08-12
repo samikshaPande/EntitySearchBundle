@@ -174,7 +174,7 @@ class QueryType extends AbstractType {
 				continue;
 			}
 			$handledFacets[$facet] = true;
-			$choices[$this->formatFacet($formatter, $facetType, $facet, $value, $count)] = $facet;
+			$choices[$this->formatFacet($formatter, $facetType, (string) $facet, $value, $count)] = (string) $facet;
 		}
 		foreach($selectedFacets as $facet) {
 			if(!isset($facets[$facet]) || isset($handledFacets[$facet])) {
@@ -182,7 +182,7 @@ class QueryType extends AbstractType {
 			}
 			$value = $facets[$facet]['value'];
 			$count = 0;
-			$choices[$this->formatFacet($formatter, $facetType, $facet, $value, $count)] = $facet;
+			$choices[$this->formatFacet($formatter, $facetType, (string) $facet, $value, $count)] = (string) $facet;
 		}
 		return $choices;
 	}
