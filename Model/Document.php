@@ -88,6 +88,16 @@ interface Document {
 	public const FIELD_CONTENT_TYPE = 'Content-Type';
 
 	/**
+	 * Key of the index field <em>no-icon-type</em>
+	 *
+	 * You should avoid using it!!
+	 *
+	 * @var string
+	 */
+	public const FIELD_NO_ICON_TYPE = 'noIconType';
+
+
+	/**
 	 * Adds a field and its value to the index
 	 *
 	 * @param string $fieldName

@@ -22,7 +22,8 @@ class DocumentAdapter implements Document {
 	public static $forceSingleValueFields = [
 		Document::FIELD_AUTHOR,
 		Document::FIELD_LAST_MODIFIED,
-		Document::FIELD_TYPE
+		Document::FIELD_TYPE,
+		Document::FIELD_NO_ICON_TYPE
 	];
 
 	/**
@@ -49,6 +50,11 @@ class DocumentAdapter implements Document {
 	 * @var string
 	 */
 	protected ?string $entityType = null;
+
+	/**
+	 * @var string|null
+	 */
+	protected ?string $noIconEntityType = null;
 
 	/**
 	 *

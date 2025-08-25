@@ -9,6 +9,7 @@ parameters:
   stinger_soft_entity_search.facets.editors.class: 'StingerSoft\EntitySearchBundle\Services\Facet\EditorsFacet'
   stinger_soft_entity_search.facets.type.class: 'StingerSoft\EntitySearchBundle\Services\Facet\TypeFacet'
   stinger_soft_entity_search.facets.filetype.class: 'StingerSoft\EntitySearchBundle\Services\Facet\FileTypeFacet'
+  stinger_soft_entity_search.facets.noIconType.class: 'StingerSoft\EntitySearchBundle\Services\Facet\NoIconTypeFacet'
 
 services:
   _defaults:
@@ -54,5 +55,8 @@ services:
 
   stinger_soft_entity_search.facets.filetype:
       class: "%stinger_soft_entity_search.facets.filetype.class%"
+
+  stinger_soft_entity_search.facets.noIconType:
+    class: "%stinger_soft_entity_search.facets.noIconType.class%"
 
   StingerSoft\EntitySearchBundle\Services\Messenger\DocumentMessageHandler:
